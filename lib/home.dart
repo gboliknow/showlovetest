@@ -74,7 +74,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               ),
               Positioned(
                 top: MediaQuery.of(context).size.height / 2 - 40,
-                left: MediaQuery.of(context).size.width / 2 + 50,
+                right: 1,
                 child: Container(
                   height: MediaQuery.of(context).size.height / 11,
                   width: 80,
@@ -93,10 +93,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 18),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("Today",
                               style: TextStyle(
@@ -180,7 +181,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
+            icon: Icon(Icons.home),
             label: 'Calls',
           ),
           BottomNavigationBarItem(
